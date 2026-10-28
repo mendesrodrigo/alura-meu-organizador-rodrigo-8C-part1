@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador do Rodrigo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones via FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Fundo Tridimensional com Objetos Voando -->
+    <div class="bg-3d-container">
+        <div class="floating-obj sphere-1"></div>
+        <div class="floating-obj cube-1"></div>
+        <div class="floating-obj torus-1"></div>
+        <div class="floating-obj sphere-2"></div>
+        <div class="floating-obj pyramid-1"></div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div class="app-container">
+        
+        <!-- Cabeçalho -->
+        <header class="main-header">
+            <h1 class="gradient-text">Organizador do Rodrigo</h1>
+            <p class="subtitle">Sua central para gestão de rotina, produtividade e otimização do dia a dia.</p>
+        </header>
+
+        <!-- Descrição da Página / Apresentação -->
+        <section class="intro-card">
+            <h2><i class="fa-solid fa-compass"></i> Sobre este Painel</h2>
+            <p>
+                Bem-vindo ao seu organizador pessoal! Este painel foi desenvolvido para estruturar suas tarefas diárias, 
+                hábitos e metas. Clique nos cards abaixo para visualizar dicas estratégicas, metodologias de foco 
+                e boas práticas de rotina com detalhes explicativos no modal.
+            </p>
+        </section>
+
+        <!-- Seção de Cards Interativos -->
+        <section class="cards-section">
+            <h2 class="section-title">Dicas & Guias de Produtividade</h2>
+            
+            <div class="cards-grid">
+                
+                <!-- Card 1 -->
+                <div class="card" onclick="openModal('modal1')">
+                    <div class="card-icon"><i class="fa-solid fa-clock"></i></div>
+                    <h3>Técnica Pomodoro</h3>
+                    <p>Gerencie seu tempo alternando blocos de foco total com pequenos descansos.</p>
+                    <span class="btn-more">Saber mais <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card" onclick="openModal('modal2')">
+                    <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
+                    <h3>Matriz de Eisenhower</h3>
+                    <p>Aprenda a priorizar tarefas entre o que é urgente e o que é realmente importante.</p>
+                    <span class="btn-more">Saber mais <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card" onclick="openModal('modal3')">
+                    <div class="card-icon"><i class="fa-solid fa-sun"></i></div>
+                    <h3>Rotina Matinal Poderosa</h3>
+                    <p>Construa os primeiros 60 minutos do seu dia para garantir alta energia constante.</p>
+                    <span class="btn-more">Saber mais <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card" onclick="openModal('modal4')">
+                    <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Higiene do Sono & Foco</h3>
+                    <p>Otimize suas noites para manter o cérebro afiado e focado no dia seguinte.</p>
+                    <span class="btn-more">Saber mais <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Efeito Modal (Popups Explicativos) -->
+
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal-overlay" onclick="closeModalOutside(event, 'modal1')">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+            <div class="modal-header">
+                <i class="fa-solid fa-clock modal-icon"></i>
+                <h2>Técnica Pomodoro</h2>
+            </div>
+            <div class="modal-body">
+                <p>A Técnica Pomodoro é um método de gerenciamento de tempo que aumenta a eficiência do trabalho e dos estudos.</p>
+                <ul>
+                    <li><strong>1. Escolha a tarefa:</strong> Liste o que precisa ser feito no dia.</li>
+                    <li><strong>2. Bloco de 25 minutos:</strong> Trabalhe na tarefa com foco total, sem interrupções.</li>
+                    <li><strong>3. Pausa de 5 minutos:</strong> Desconecte-se totalmente do trabalho (alongue-se, tome água).</li>
+                    <li><strong>4. Ciclo longo:</strong> A cada 4 blocos de foco, faça uma pausa maior de 15 a 30 minutos.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal-overlay" onclick="closeModalOutside(event, 'modal2')">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+            <div class="modal-header">
+                <i class="fa-solid fa-list-check modal-icon"></i>
+                <h2>Matriz de Eisenhower</h2>
+            </div>
+            <div class="modal-body">
+                <p>Essa ferramenta ajuda a dividir suas obrigações em 4 quadrantes para evitar o estresse e apagamento de incêndios:</p>
+                <ul>
+                    <li><strong>Urgente e Importante:</strong> Faça imediatamente (prazos críticos, emergências).</li>
+                    <li><strong>Importante, mas Não Urgente:</strong> Agende no seu organizador (estudos, projetos de longo prazo).</li>
+                    <li><strong>Urgente, mas Não Importante:</strong> Delegue se possível (notificações, reuniões desnecessárias).</li>
+                    <li><strong>Nem Urgente nem Importante:</strong> Elimine (distrações e hábitos acumuladores de tempo).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal-overlay" onclick="closeModalOutside(event, 'modal3')">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+            <div class="modal-header">
+                <i class="fa-solid fa-sun modal-icon"></i>
+                <h2>Rotina Matinal Poderosa</h2>
+            </div>
+            <div class="modal-body">
+                <p>Como você começa o seu dia define a energia das horas seguintes. Dicas práticas:</p>
+                <ul>
+                    <li><strong>Evite o celular nos primeiros 30 min:</strong> Não alimente o cérebro com dopamina rápida e ansiedade logo ao acordar.</li>
+                    <li><strong>Hidratação imediata:</strong> Beba 500ml de água para reativar seu metabolismo.</li>
+                    <li><strong>Movimento leve:</strong> Faça 5 a 10 minutos de alongamento ou caminhada.</li>
+                    <li><strong>Revise seu Organizador:</strong> Olhe suas prioridades principais antes de abrir e-mails ou mensagens.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div id="modal4" class="modal-overlay" onclick="closeModalOutside(event, 'modal4')">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
+            <div class="modal-header">
+                <i class="fa-solid fa-brain modal-icon"></i>
+                <h2>Higiene do Sono & Foco</h2>
+            </div>
+            <div class="modal-body">
+                <p>A produtividade do dia nasce na qualidade do sono da noite anterior.</p>
+                <ul>
+                    <li><strong>Desligamento progressivo:</strong> Reduza luzes fortes e telas 1 hora antes de dormir.</li>
+                    <li><strong>Consistência de horário:</strong> Tente dormir e acordar nos mesmos horários todos os dias.</li>
+                    <li><strong>Ambiente ideal:</strong> Mantenha o quarto o mais escuro e silencioso possível.</li>
+                    <li><strong>Esvazie a mente:</strong> Anote no seu organizador as pendências do dia seguinte para não levá-las para a cama.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Simples para Controle do Modal -->
+    <script>
+        function openModal(id) {
+            document.getElementById(id).classList.add('active');
+            document.body.style.overflow = 'hidden'; // Impede rolagem ao fundo
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function closeModalOutside(event, id) {
+            if (event.target.classList.contains('modal-overlay')) {
+                closeModal(id);
+            }
+        }
+    </script>
+</body>
+</html>
